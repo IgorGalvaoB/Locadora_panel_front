@@ -2,7 +2,12 @@ import getLocadora from "./locadoraGlobal.js"
 import { adicionarCarroAPI } from "../api/apiHandler.js"
 
 document.addEventListener("DOMContentLoaded", async () => {
-    // Atualizar o nome do arquivo selecionado
+    const token = sessionStorage.getItem("token")
+    if (!token) {
+        window.location.href = "./login.html"
+        return
+    }
+
     const fileInput = document.getElementById("imagem")
     const fileName = document.getElementById("file-name")
 

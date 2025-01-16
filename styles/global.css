@@ -5,7 +5,13 @@
 }
 body{
     background-color: #f7f7f7 ;
+    position:relative;
 }
+footer{
+    position:sticky;
+    bottom:0;
+}
+
 html {
     font-size: 16px;
 }

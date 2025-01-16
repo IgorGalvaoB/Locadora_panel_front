@@ -1,5 +1,7 @@
 #navbar {
     background-color: #007BFF !important;
+    position:sticky;
+    top:0
 }
 
 .navbar-brand {
@@ -8,6 +10,8 @@
 
 .navbar-toggler-icon {
     background-color: #0DCAF0;
+    height: 3vh;
+
 }
 
 .navbar-nav .nav-link {
@@ -41,6 +45,7 @@
 .navbar-toggler.collapsed {
     border: none;
     outline: none;
+    padding:0px;
     box-shadow: none;
     max-height: 4vh;
 }
@@ -50,11 +55,18 @@
     border: 2px solid black;
     outline: none;
     box-shadow: none;
+    padding:0px;
 }
+.navbar-toggler:not(.collapsed) >.navbar-toggler-icon{
+    height: 2.4vh;
+    
+}
+
+
 #login-button {
    
     color: black;
 }
 #toogle-button{
-    max-height: 3vh;
+    max-height: 4vh;
 }
