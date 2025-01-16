@@ -1,5 +1,6 @@
 import { loginAPI } from "../api/apiHandler.js"
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.getElementById("loginForm")
 

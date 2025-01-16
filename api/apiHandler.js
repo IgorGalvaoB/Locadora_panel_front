@@ -4,31 +4,24 @@ const LIST_CARS_URL = `${BASE_URL}/listCars/getCars`
 const DEL_CAR_URL = `${BASE_URL}/adminCars/deleteCar/`
 const ADD_CAR_URL = `${BASE_URL}/adminCars/addCar`
 
-export const adicionarCarroAPI = async (carro, imagem) => {
-    const token = localStorage.getItem('token')
+export const adicionarCarroAPI = async (formData) => {
+    const token = sessionStorage.getItem('token')
     if (!token) {
         console.error('Token de autorização não encontrado.')
         return 'Token de autorização não encontrado.'
     }
 
+    for (let [key, value] of formData.entries()) {
+    console.log(`${key}:`, value)
+}
 
-    const bearerToken = `Bearer ${token}`
-
-    const formData = new FormData()
-    formData.append('marca', carro.marca)
-    formData.append('modelo', carro.modelo)
-    formData.append('ano_fabricacao', carro.ano_fabricacao)
-    formData.append('cor', carro.cor)
-    formData.append('tipo', carro.tipo)
-    formData.append('quilometragem', carro.quilometragem)
-    formData.append('num_portas', carro.num_portas)
-    formData.append('image', imagem) 
+    
 
     try {
         const response = await fetch(`${ADD_CAR_URL}`, {
             method: 'POST',
             headers: {
-                'Authorization': bearerToken, 
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODZkZTNjNGUxN2U1OWNjMjJhZjA3YyIsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3MzcwMDM2Mzd9.HtlD0lPGkEUIBIHPsfXo8KaeQsYv4CVPHsP_lZyE34s', 
             },
             body: formData, 
         })
@@ -79,7 +72,7 @@ export const listarCarrosAPI = async () => {
 
 
 export const excluirCarroAPI = async (id) => {
-    const token = localStorage.getItem('token')
+    const token = sessionStorage.getItem('token')
     if (!token) {
         console.error('Token de autorização não encontrado.')
         return 'Token de autorização não encontrado.'
