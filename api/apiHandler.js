@@ -132,9 +132,9 @@ export const loginAPI = async (username, password) => {
             throw new Error(data.error || 'Erro desconhecido no login')
         }
 
-        localStorage.setItem('token', `Bearer ${data.token}`)
-        localStorage.setItem('usuario', data.username)
-        localStorage.setItem('ID', data.userId)
+        sessionStorage.setItem('token', `Bearer ${data.token}`)
+        sessionStorage.setItem('usuario', data.username)
+        sessionStorage.setItem('ID', data.userId)
 
         return data 
 

@@ -1,4 +1,3 @@
-// Locadora.js
 import Carro from './Carro.js'
 import { adicionarCarroAPI, listarCarrosAPI, excluirCarroAPI } from '../api/apiHandler.js'
 

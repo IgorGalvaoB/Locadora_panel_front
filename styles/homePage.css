@@ -1,0 +1,13 @@
+
+
+.row .col-md-6 {
+    min-height: 300px;
+ 
+}
+
+.row .col-md-6 .h-100 {
+    min-height: 300px;
+}
+.content-home{
+    background-color: rgb(221, 239, 255);
+}

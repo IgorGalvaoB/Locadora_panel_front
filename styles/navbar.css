@@ -1,0 +1,60 @@
+#navbar {
+    background-color: #007BFF !important;
+}
+
+.navbar-brand {
+    color: #FFFFFF ;
+}
+
+.navbar-toggler-icon {
+    background-color: #0DCAF0;
+}
+
+.navbar-nav .nav-link {
+    color: #FFFFFF ;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFD700 ;
+}
+
+.navbar-collapse {
+    background-color: #007BFF ;
+}
+
+.nav-item.navbar-links {
+    max-height: 5vh;
+}
+
+.navbar-nav .nav-item a {
+    color: #FFFFFF ;
+}
+
+.navbar-nav .nav-item a:hover {
+    color: #FFD700 ;
+}
+
+.navbar-toggler {
+    background-color: #0DCAF0;
+    max-height: 4vh;
+}
+.navbar-toggler.collapsed {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    max-height: 4vh;
+}
+
+
+.navbar-toggler:not(.collapsed) {
+    border: 2px solid black;
+    outline: none;
+    box-shadow: none;
+}
+#login-button {
+   
+    color: black;
+}
+#toogle-button{
+    max-height: 3vh;
+}
