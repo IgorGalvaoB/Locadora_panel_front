@@ -1,11 +1,11 @@
 class Veiculo {
-    constructor(marca, modelo, anoFabricacao, quilometragem, imagem) {
+    constructor(marca, modelo, ano_fabricacao, quilometragem, imagem) {
         if (new.target === Veiculo) {
             throw new TypeError("Não é possível instanciar a classe. Utilize uma classe filha.");
         }
         this.marca = marca;
         this.modelo = modelo;
-        this.anoFabricacao = anoFabricacao;
+        this.anoFabricacao = ano_fabricacao;
         this.quilometragem = quilometragem;
         this.imagem = imagem;
     }

@@ -33,7 +33,10 @@ export const adicionarCarroAPI = async (formData) => {
         }
 
         console.log('Carro adicionado com sucesso:', data.carro)
-        return `Carro ${data.carro.modelo} adicionado com sucesso.`
+        return {
+            message:`Carro ${data.carro.modelo} adicionado com sucesso.`,
+            carro: data.carro
+        }
 
     } catch (error) {
         console.error('Erro ao adicionar o carro:', error.message)

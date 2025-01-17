@@ -1,12 +1,12 @@
 import Veiculo from './Veiculo.js'
 
 class Carro extends Veiculo {
-    constructor(marca, modelo, anoFabricacao, quilometragem, imagem, cor, numPortas, tipo, id) {
-        super(marca, modelo, anoFabricacao, quilometragem, imagem)
+    constructor({ano_fabricacao, cor, imagem,marca,modelo, num_portas, quilometragem, tipo, _id}) {
+        super(marca, modelo, ano_fabricacao, quilometragem, imagem)
         this.cor = cor
-        this.numPortas = numPortas
+        this.numPortas = num_portas
         this.tipo = tipo
-        this.id = id
+        this.id = _id
     }
 }
 

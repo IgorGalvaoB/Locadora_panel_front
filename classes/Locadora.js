@@ -10,14 +10,15 @@ class Locadora {
     inicializar = async () => {
         try {
             const carrosData = await listarCarrosAPI()
+            
             if (Array.isArray(carrosData) && carrosData.length > 0) {
-               
-                this.carros = carrosData.map(carro => new Carro({ 
-                    ...carro, 
-                    id: carro._id
-                }))
+                
+                this.carros = carrosData.map(carro => new Carro(
+                    {...carro}
+                ))
             } else {
                 console.log('Não há carros para carregar')
+
             }
         } catch (error) {
             console.error('Erro ao inicializar a locadora:', error)
@@ -25,19 +26,25 @@ class Locadora {
         }
     }
 
-    adicionarCarro = async (carro, imagem) => {
+    adicionarCarro = async (formData) => {
         try {
-            const mensagem = await adicionarCarroAPI(carro, imagem)
-            if (mensagem.includes('sucesso')) {
+            const response = await adicionarCarroAPI(formData)
+            
+            if (response.message.includes('sucesso')) {
                 this.carros.push(new Carro({ 
-                    ...carro, 
-                    id: carro._id
+                    ...response.carro
                 }))
+                alert("Carro adicionado com sucesso!")
+            } else {
+                console.log("Erro ao adicionar o carro na locadora.")
+                await this.inicializar()
+                alert("Erro ao adicionar o carro na locadora.")
             }
-            return mensagem
+
         } catch (error) {
             console.error('Erro ao adicionar carro:', error)
-            return 'Erro ao adicionar carro.'
+            alert('Erro ao adicionar o carro no banco de dados.')
+         
         }
     }
 

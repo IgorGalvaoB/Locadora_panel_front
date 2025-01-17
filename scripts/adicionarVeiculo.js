@@ -7,7 +7,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = "./login.html"
         return
     }
-
+    
+    try {
+        const locadora = await getLocadora()
+        console.log(locadora.carros)
+    }catch (error) {
+        console.error("Erro ao inicializar a locadora:", error)
+        alert("Erro ao inicializar a locadora. Tente novamente.")
+    }
     const fileInput = document.getElementById("imagem")
     const fileName = document.getElementById("file-name")
 
@@ -31,7 +38,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             return
         }
 
-       
         const formData = new FormData()
         formData.append("marca", document.getElementById("marca").value.trim())
         formData.append("cor", document.getElementById("cor").value.trim())
@@ -46,26 +52,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         try {
          
-            const response = await adicionarCarroAPI(formData)
-
-            if (response.carro) {
-                const locadora = await getLocadora()
-                locadora.carros.push({
-                    ...response.carro,
-                    id: response.carro._id
-                })
-
-                alert("Carro adicionado com sucesso!")
-            } else {
-                alert(response.message || "Erro ao adicionar o carro.")
-            }
-
+            await locadora.adicionarCarro(formData)
+           
             addCarForm.reset()
             fileName.textContent = "Nenhum arquivo selecionado"
             addCarForm.classList.remove("was-validated")
+
         } catch (error) {
             console.error("Erro ao adicionar carro:", error)
-            alert("Erro ao adicionar o carro. Tente novamente.")
+
         }
     })
 })
