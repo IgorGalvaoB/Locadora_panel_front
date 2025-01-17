@@ -1,8 +1,8 @@
 import { loginAPI } from "../api/apiHandler.js"
-import getLocadora from "./locadoraGlobal.js"
+
 
 document.addEventListener("DOMContentLoaded", async () => {
-    console.log(window.locadora)
+
     const loginForm = document.getElementById("loginForm")
 
     loginForm.addEventListener("submit", async (event) => {

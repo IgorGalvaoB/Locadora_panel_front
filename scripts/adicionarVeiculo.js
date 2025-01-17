@@ -1,4 +1,4 @@
-import getLocadora from "./locadoraGlobal.js"
+import { getLocadora } from "./locadoraGlobal.js"
 import { adicionarCarroAPI } from "../api/apiHandler.js"
 
 document.addEventListener("DOMContentLoaded", async () => {

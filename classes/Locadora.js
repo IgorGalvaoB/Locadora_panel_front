@@ -4,7 +4,6 @@ import { adicionarCarroAPI, listarCarrosAPI, excluirCarroAPI } from '../api/apiH
 class Locadora {
     constructor() {
         this.carros = []
-        this.inicializar() 
     }
 
     inicializar = async () => {
