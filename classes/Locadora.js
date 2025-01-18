@@ -1,5 +1,5 @@
 import Carro from './Carro.js'
-import { adicionarCarroAPI, listarCarrosAPI, excluirCarroAPI } from '../api/apiHandler.js'
+import { adicionarCarroAPI, listarCarrosAPI, excluirCarroAPI } from '../api/ApiHandler.js'
 
 class Locadora {
     constructor() {
@@ -29,17 +29,8 @@ class Locadora {
         try {
             const response = await adicionarCarroAPI(formData)
             
-            if (response.message.includes('sucesso')) {
-                this.carros.push(new Carro({ 
-                    ...response.carro
-                }))
-                alert("Carro adicionado com sucesso!")
-            } else {
-                console.log("Erro ao adicionar o carro na locadora.")
-                await this.inicializar()
-                alert("Erro ao adicionar o carro na locadora.")
-            }
-
+            alert("Carro adicionado com sucesso!")
+            
         } catch (error) {
             console.error('Erro ao adicionar carro:', error)
             alert('Erro ao adicionar o carro no banco de dados.')

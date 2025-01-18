@@ -1,20 +1,13 @@
-import { getLocadora } from "./locadoraGlobal.js"
-import { adicionarCarroAPI } from "../api/apiHandler.js"
+import ApiHandler from "../classes/api/ApiHandler.js"
 
 document.addEventListener("DOMContentLoaded", async () => {
     const token = sessionStorage.getItem("token")
     if (!token) {
         window.location.href = "./login.html"
+        alert("Você precisa estar logado para acessar esta página.")    
         return
     }
-    
-    try {
-        const locadora = await getLocadora()
-        console.log(locadora.carros)
-    }catch (error) {
-        console.error("Erro ao inicializar a locadora:", error)
-        alert("Erro ao inicializar a locadora. Tente novamente.")
-    }
+   
     const fileInput = document.getElementById("imagem")
     const fileName = document.getElementById("file-name")
 
@@ -28,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
 
     const addCarForm = document.getElementById("addCarForm")
-
+    const apiHandler = new ApiHandler()
     addCarForm.addEventListener("submit", async (event) => {
         event.preventDefault()
         event.stopPropagation()
@@ -47,12 +40,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         formData.append("num_portas", document.getElementById("num_portas").value.trim())
         formData.append("tipo", document.getElementById("tipo").value.trim())
         formData.append("image", fileInput.files[0])
-        console.log("Arquivo selecionado:", document.getElementById("imagem").files[0])
-        console.log("Form data:", formData)
 
         try {
          
-            await locadora.adicionarCarro(formData)
+            await apiHandler.adicionarCarro(formData)
            
             addCarForm.reset()
             fileName.textContent = "Nenhum arquivo selecionado"

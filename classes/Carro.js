@@ -1,13 +1,16 @@
-import Veiculo from './Veiculo.js'
-
-class Carro extends Veiculo {
+class Carro {
     constructor({ano_fabricacao, cor, imagem,marca,modelo, num_portas, quilometragem, tipo, _id}) {
-        super(marca, modelo, ano_fabricacao, quilometragem, imagem)
         this.cor = cor
         this.numPortas = num_portas
         this.tipo = tipo
         this.id = _id
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anoFabricacao = ano_fabricacao;
+        this.quilometragem = quilometragem;
+        this.imagem = imagem;
     }
+    
 }
 
 export default Carro

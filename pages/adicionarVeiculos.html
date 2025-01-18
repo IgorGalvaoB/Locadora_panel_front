@@ -48,8 +48,7 @@
         </div>
     </nav>
 
-    
-    
+
     <div class="container-md d-flex flex-column align-items-center justify-content-center py-2"
         style="min-height: 90vh;">
         <div class="add-car-form">
@@ -58,14 +57,14 @@
              
                 <div class="mb-1">
                     <label for="marca" class="form-label fw-bold">Marca</label>
-                    <input type="text" class="form-control" id="marca" placeholder="Digite a marca" required>
+                    <input type="text" class="form-control" id="marca" placeholder="Digite a marca" required value="Renault">
                     <div class="invalid-feedback">
                         Por favor, preencha a marca.
                     </div>
                 </div>
                 <div class="mb-1">
                     <label for="modelo" class="form-label fw-bold">Modelo</label>
-                    <input type="text" class="form-control" id="modelo" placeholder="Digite o modelo" required>
+                    <input type="text" class="form-control" id="modelo" placeholder="Digite o modelo" required value="sandero">
                     <div class="invalid-feedback">
                         Por favor, preencha o modelo.
                     </div>
@@ -73,7 +72,7 @@
     
                 <div class="mb-1">
                     <label for="ano_fabricacao" class="form-label fw-bold">Ano de Fabricação</label>
-                    <input type="number" class="form-control" id="ano_fabricacao" placeholder="Digite o ano de fabricação" required>
+                    <input type="number" class="form-control" id="ano_fabricacao" placeholder="Digite o ano de fabricação" required value="2300">
                     <div class="invalid-feedback">
                         Por favor, preencha o ano de fabricação.
                     </div>
@@ -81,7 +80,7 @@
     
                 <div class="mb-1">
                     <label for="cor" class="form-label fw-bold">Cor</label>
-                    <input type="text" class="form-control" id="cor" placeholder="Digite a cor" required>
+                    <input type="text" class="form-control" id="cor" placeholder="Digite a cor" value="4" required>
                     <div class="invalid-feedback">
                         Por favor, preencha a cor.
                     </div>
@@ -90,7 +89,7 @@
                     <label for="tipo" class="form-label fw-bold">Tipo</label>
                     <select class="form-select" id="tipo" required>
                         <option value="" selected disabled>Selecione o tipo</option>
-                        <option value="Hatch">Hatch</option>
+                        <option value="Hatch" selected>Hatch</option>
                         <option value="Sedan">Sedan</option>
                         <option value="SUV">SUV</option>
                         <option value="Picape">Picape</option>
@@ -104,7 +103,7 @@
                 
                 <div class="mb-1">
                     <label for="quilometragem" class="form-label fw-bold">Quilometragem</label>
-                    <input type="number" class="form-control" id="quilometragem" placeholder="Digite a quilometragem" required>
+                    <input type="number" class="form-control" id="quilometragem" placeholder="Digite a quilometragem" required value="4">
                     <div class="invalid-feedback">
                         Por favor, preencha a quilometragem.
                     </div>
@@ -114,7 +113,7 @@
 
                 <div class="mb-1">
                     <label for="num_portas" class="form-label fw-bold">Número de Portas</label>
-                    <input type="number" class="form-control" id="num_portas" placeholder="Digite o número de portas" required>
+                    <input type="number" class="form-control" id="num_portas" placeholder="Digite o número de portas" required value="4">
                     <div class="invalid-feedback">
                         Por favor, preencha o número de portas.
                     </div>
@@ -147,7 +146,7 @@
         crossorigin="anonymous"></script>
     
     <script type="module" src="../scripts/navbarScript.js"></script>
-    <script type="module" src="../scripts/adicionarVeiculo.js"></script>
+    <script type="module" src="../scripts/adicionarVeiculoScript.js"></script>
 </body>
 
 </html>

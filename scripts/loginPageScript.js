@@ -1,4 +1,4 @@
-import { loginAPI } from "../api/apiHandler.js"
+import ApiHandler from "../classes/api/ApiHandler.js"
 
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             loginForm.classList.add("was-validated")
             return
         }
-
+        const apiHandler = new ApiHandler()
         try {
-            const response = await loginAPI(username, password)
+            const response = await apiHandler.login(username, password)
 
             if (response.token) {
                 window.location.href = "./home.html"
