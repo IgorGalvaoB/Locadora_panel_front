@@ -30,6 +30,7 @@ class ApiHandler {
             }
 
             console.log('Carro adicionado com sucesso:', data.carro)
+            alert(`Carro ${data.carro.modelo} adicionado com sucesso.`)
             return {
                 message: `Carro ${data.carro.modelo} adicionado com sucesso.`,
                 carro: data.carro

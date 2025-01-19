@@ -46,7 +46,7 @@ class CardCarro extends Carro {
     }
     getDelCardCarro = () => {
         const card = this.getCardCarro()
-        console.log(this.id)
+      
         const deleteButton = document.createElement('button')
         deleteButton.className = 'btn btn-danger mt-2 carro-del fw-bold text-light'
         deleteButton.innerText = 'EXCLUIR'
