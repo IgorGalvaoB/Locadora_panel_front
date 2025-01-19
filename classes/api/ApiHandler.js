@@ -77,13 +77,11 @@ class ApiHandler {
             return 'Token de autorização não encontrado.'
         }
 
-        const bearerToken = `Bearer ${token}`
-
         try {
             const response = await fetch(`${this.DEL_CAR_URL}${id}`, {
                 method: 'DELETE',
                 headers: {
-                    'Authorization': bearerToken,
+                    Authorization: `${token}`,
                     'Content-Type': 'application/json'
                 }
             })

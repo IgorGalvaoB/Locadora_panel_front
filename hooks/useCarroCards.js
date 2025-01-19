@@ -1,23 +1,30 @@
 import ApiHandler from '../classes/api/ApiHandler.js'
 import CardCarro from '../classes/CardCarro.js'
 
-const useCarCards = async () => {
+const useCarCards = async (del) => {
     const apiHandler = new ApiHandler()
 
     try {
-      
-        
         
         const carros = await apiHandler.listarCarros()
 
         if (carros === 'Não há carros para listar') {
             return 'Nenhum carro cadastrado'
         }else{
-            const carCards = carros.map((carroData) => {
-                const cardCarro = new CardCarro(carroData)
-                return cardCarro.getCardCarro()
-            })
-            return carCards
+            if (del === 'delete') {
+                const carCards = carros.map((carroData) => {
+                    const cardCarro = new CardCarro(carroData)
+                    return cardCarro.getDelCardCarro()
+                })
+                return carCards
+            }else{
+
+                const carCards = carros.map((carroData) => {
+                    const cardCarro = new CardCarro(carroData)
+                    return cardCarro.getCardCarro()
+                })
+                return carCards
+            }
 
         }
 
