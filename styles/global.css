@@ -2,6 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
     background-color: #f7f7f7 ;
@@ -9,7 +10,8 @@ body{
 }
 footer{
     position:sticky;
-    bottom:0;
+    bottom:0px;
+    height: 5vh;
 }
 
 html {

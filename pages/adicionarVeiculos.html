@@ -4,34 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locadora Veiculos</title>
+    <title>Roda Mais</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/adicionarVeiculosPage.css">
 
-   
+
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md py-0 my-0 py-0 mx-0 px-0" id="navbar">
-        <div class="container-md my-0 py-0" >
+        <div class="container-md my-0 py-0">
             <a href="./home.html" style="height: 100%;" class="d-flex align-items-center">
-                <img src="../images/logo.svg" style="height: 100%; width: auto;" alt="Logo RM">
+                <img src="../assets/images/logo.svg" style="height: 100%; width: auto;" alt="Logo RM">
             </a>
             <button class="navbar-toggler ms-auto ps-2 pe-2" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation ms-auto" style="height: 90%;">
                 <span class="navbar-toggler-icon" id="toogle-button"></span>
             </button>
-            <div class="collapse navbar-collapse py-0 my-0 mx-0 p-1 ms-auto rounded-bottom-1"  id="navbarSupportedContent">
+            <div class="collapse navbar-collapse py-0 my-0 mx-0 p-1 ms-auto rounded-bottom-1"
+                id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-lg-0">
                     <li class="nav-item navbar-links">
                         <a class="nav-link fw-bold" aria-current="page" href="./home.html">Sobre a Empresa</a>
                     </li>
                     <li class="nav-item navbar-links">
-                        <a class="nav-link fw-bold" aria-current="page" href="#">Listar Veículos</a>
+                        <a class="nav-link fw-bold" aria-current="page" href="./listarVeiculos.html">Listar Veículos</a>
                     </li>
                     <li class="nav-item navbar-links">
                         <a class="nav-link fw-bold" href="./adicionarVeiculos.html">Cadastrar Veículo</a>
@@ -39,9 +41,9 @@
                     <li class="nav-item" id="btn-sing-login">
                         <a class="nav-link fw-bold me-2" href="#">Excluir Veículos</a>
                     </li>
-                    <li class="nav-item align-items-center">    
+                    <li class="nav-item align-items-center">
                         <a href="./login.html" class="btn btn-light mt-2 mb-2 p-0 ps-3 pe-3 rounded-1"
-                             id="login-button">Login</a>
+                            id="login-button">Login</a>
                     </li>
                 </ul>
             </div>
@@ -54,30 +56,33 @@
         <div class="add-car-form">
             <h2 class="text-center text-primary mb-2">ADICIONAR CARRO</h2>
             <form id="addCarForm" class="needs-validation" novalidate>
-             
+
                 <div class="mb-1">
                     <label for="marca" class="form-label fw-bold">Marca</label>
-                    <input type="text" class="form-control" id="marca" placeholder="Digite a marca" required value="Renault">
+                    <input type="text" class="form-control" id="marca" placeholder="Digite a marca" required
+                        value="Renault">
                     <div class="invalid-feedback">
                         Por favor, preencha a marca.
                     </div>
                 </div>
                 <div class="mb-1">
                     <label for="modelo" class="form-label fw-bold">Modelo</label>
-                    <input type="text" class="form-control" id="modelo" placeholder="Digite o modelo" required value="sandero">
+                    <input type="text" class="form-control" id="modelo" placeholder="Digite o modelo" required
+                        value="sandero">
                     <div class="invalid-feedback">
                         Por favor, preencha o modelo.
                     </div>
                 </div>
-    
+
                 <div class="mb-1">
                     <label for="ano_fabricacao" class="form-label fw-bold">Ano de Fabricação</label>
-                    <input type="number" class="form-control" id="ano_fabricacao" placeholder="Digite o ano de fabricação" required value="2300">
+                    <input type="number" class="form-control" id="ano_fabricacao"
+                        placeholder="Digite o ano de fabricação" required value="2300">
                     <div class="invalid-feedback">
                         Por favor, preencha o ano de fabricação.
                     </div>
                 </div>
-    
+
                 <div class="mb-1">
                     <label for="cor" class="form-label fw-bold">Cor</label>
                     <input type="text" class="form-control" id="cor" placeholder="Digite a cor" value="4" required>
@@ -99,32 +104,35 @@
                         Por favor, selecione o tipo.
                     </div>
                 </div>
-                
-                
+
+
                 <div class="mb-1">
                     <label for="quilometragem" class="form-label fw-bold">Quilometragem</label>
-                    <input type="number" class="form-control" id="quilometragem" placeholder="Digite a quilometragem" required value="4">
+                    <input type="number" class="form-control" id="quilometragem" placeholder="Digite a quilometragem"
+                        required value="4">
                     <div class="invalid-feedback">
                         Por favor, preencha a quilometragem.
                     </div>
                 </div>
-    
-              
+
+
 
                 <div class="mb-1">
                     <label for="num_portas" class="form-label fw-bold">Número de Portas</label>
-                    <input type="number" class="form-control" id="num_portas" placeholder="Digite o número de portas" required value="4">
+                    <input type="number" class="form-control" id="num_portas" placeholder="Digite o número de portas"
+                        required value="4">
                     <div class="invalid-feedback">
                         Por favor, preencha o número de portas.
                     </div>
                 </div>
-    
-         
-               
+
+
+
                 <div class="mb-2">
                     <label for="imagem" class="form-label fw-bold">Imagem do Carro</label>
                     <div class="custom-file">
-                        <label for="imagem" class="custom-file-label btn btn-outline-primary fw-bold">Selecionar Imagem</label>
+                        <label for="imagem" class="custom-file-label btn btn-outline-primary fw-bold">Selecionar
+                            Imagem</label>
                         <input type="file" class="form-control d-none" id="imagem" accept="image/*" required>
                         <span id="file-name" class="form-text mt-2">Sem Imagem</span>
                     </div>
@@ -132,19 +140,19 @@
                         Por favor, selecione uma imagem do carro.
                     </div>
                 </div>
-    
+
                 <button type="submit" class="btn btn-primary w-100 fw-bold">Adicionar Carro</button>
             </form>
         </div>
     </div>
-    
+
     <footer class="d-flex align-items-center justify-content-center bg-dark text-white mb-0">
         <p class="m-0" style="color:white">&copy; IMD - WEBDEV I</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    
+
     <script type="module" src="../scripts/navbarScript.js"></script>
     <script type="module" src="../scripts/adicionarVeiculoScript.js"></script>
 </body>

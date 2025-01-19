@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         try {
          
             await apiHandler.adicionarCarro(formData)
-           
             addCarForm.reset()
             fileName.textContent = "Nenhum arquivo selecionado"
             addCarForm.classList.remove("was-validated")

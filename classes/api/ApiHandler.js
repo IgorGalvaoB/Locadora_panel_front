@@ -17,7 +17,7 @@ class ApiHandler {
             const response = await fetch(this.ADD_CAR_URL, {
                 method: 'POST',
                 headers: {
-                    Authorization: `Bearer ${token}`,
+                    Authorization: `${token}`,
                 },
                 body: formData,
             })
@@ -53,12 +53,12 @@ class ApiHandler {
 
             const data = await response.json()
 
-            if (!response.ok) {
+            if (!data) {
                 throw new Error(data.error || 'Erro ao buscar os carros')
             }
 
-            if (data.length === 0) {
-                console.warn('Não há carros disponíveis para listar.')
+            if (data.message === "Nenhum carro encontrado") {
+        
                 return 'Não há carros para listar'
             }
 
