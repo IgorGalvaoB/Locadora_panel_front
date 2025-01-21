@@ -14,7 +14,7 @@ eu coloquei a aplicacao no pages do github o link está abaixo.
 ## Links
 
 - [Link para o repositório do back-end](https://github.com/IgorGalvaoB/back_end_locadora_av_final_web_I)
-- [Link para o projeto ao vivo](https://exemplo.com) *(substitua com o link do seu projeto ao vivo)*
+- [Link para o projeto ao vivo](https://www.loom.com/share/38758c098b714561a30f10fcf999a3ac)
 - [Link para o pages do projeto](https://igorgalvaob.github.io/front_end_web_I_projeto_final/pages/home.html)
 ## Como Rodar o Projeto
 
