@@ -13,7 +13,7 @@ Tanto a a adicao de veiculos quanto a deleção precisam de token (estar logado)
 ## Links
 
 - [Link para o repositório do back-end](https://github.com/IgorGalvaoB/Locadora_panel_front)
-- [Link para o pages do projeto](https://github.com/IgorGalvaoB/Locadora_panel_front.git)
+- [Link para o pages do projeto](https://igorgalvaob.github.io/Locadora_panel_front/pages/home.html)
 ## Como Rodar o Projeto
 
 1. Clone este repositório:
